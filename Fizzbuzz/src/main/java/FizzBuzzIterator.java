@@ -1,6 +1,6 @@
 import java.util.Iterator;
 
-public class FizzBuzzIterator<String> implements Iterator<String> {
+public class FizzBuzzIterator implements Iterator<String> {
     private int i = 0;
         @Override
         public boolean hasNext() {
@@ -10,17 +10,16 @@ public class FizzBuzzIterator<String> implements Iterator<String> {
         @Override
         public String next() {
             i++;
-
             if (isBuzzable(i) && isFuzzable(i))
-                return (String) "FizzBuzz";
+                return  "FizzBuzz";
 
             if (isFuzzable(i))
-                return (String) "Fizz";
+                return  "Fizz";
 
             if (isBuzzable(i))
-                return (String) "Buzz";
+                return  "Buzz";
 
-            return (String) Integer.toString(i);
+            return Integer.toString(i);
         }
 
         @Override
